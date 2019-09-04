@@ -35,21 +35,21 @@ public class CustomerController {
 	}
 	
 	
-	@GetMapping("/customers/{customerId}")
+	@GetMapping("/customers/1/{customerId}")
 	public Customer getCustomerByID(@PathVariable String customerId) {
 		
 		return customerService.getCustomerById(customerId);
 		
 	}
 	
-	@GetMapping("/customers/customerFirstName")
+	@GetMapping("/customers/firstname/{customerFirstName}")
 	public Customer getCustomerByFirstName(@PathVariable String customerFirstName) {
 		
 		return customerService.getCustomerByFirstName(customerFirstName);
 		
 	}
 	
-	@GetMapping("/customers/customerLastName")
+	@GetMapping("/customers/lastname/{customerLastName}")
 	public Customer getCustomerByLastName(@PathVariable String customerLastName) {
 		
 		return customerService.getCustomerByLastName(customerLastName);
@@ -57,7 +57,7 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/customers")
-	public List<Customer> getAllCustomers(){
+	public Iterable<Customer> getAllCustomers(){
 		return customerService.getAllCustomers();
 	}
 	

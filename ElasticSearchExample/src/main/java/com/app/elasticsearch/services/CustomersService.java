@@ -14,7 +14,7 @@ public interface CustomersService {
 	
 	Customer getCustomerByLastName(String customerLastName);
 	
-	List<Customer> getAllCustomers();
+	Iterable<Customer> getAllCustomers();
 	
 	void deleteCustomer(String customerId);
 
